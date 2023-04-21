@@ -1,0 +1,45 @@
+header{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+   
+}
+body{
+    background-color: cyan;
+}
+h1 {
+    text-align: center;
+    font-size: 56px;
+}
+nav {
+    text-align: center;
+    background-color: navajowhite;
+    font-size: 32px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+a {
+    margin-left: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+a:hover {
+    background-color: white;
+}
+main {
+    background-color: lightgray;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+footer {
+    background-color: gold;
+    font-size: 28px;
+    text-align: center;
+}
