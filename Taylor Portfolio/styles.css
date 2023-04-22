@@ -18,6 +18,122 @@ nav {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+#slider1 {
+    position: relative;
+    width: 500px;
+    height: 265px;
+  
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  }
+#slider2 {
+    position: relative;
+    width: 500px;
+    height: 265px;
+  
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  }
+#slider3 {
+    position: relative;
+    width: 500px;
+    height: 265px;
+  
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  }
+#slider4 {
+    position: relative;
+    width: 500px;
+    height: 265px;
+  
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  }
+  #slider1 ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 10000%;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+  }
+  #slider1 ul li {
+    position: relative;
+    height: 100%;
+  
+    float: left;
+  }
+  #slider1 ul li img{
+    width: 500px;
+    height: 265px;
+  }
+  
+  #slider2 ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 10000%;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+  }
+  #slider2 ul li {
+    position: relative;
+    height: 100%;
+  
+    float: left;
+  }
+  #slider2 ul li img{
+    width: 500px;
+    height: 265px;
+  }
+
+  #slider3 ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 10000%;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+  }
+  #slider3 ul li {
+    position: relative;
+    height: 100%;
+  
+    float: left;
+  }
+  #slider3 ul li img{
+    width: 500px;
+    height: 265px;
+  }
+
+  #slider4 ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 10000%;
+    padding: 0;
+    margin: 0;
+    transition: all 750ms ease;
+    left: 0;
+  }
+  #slider4 ul li {
+    position: relative;
+    height: 100%;
+  
+    float: left;
+  }
+#slider4 ul li img{
+  width: 500px;
+  height: 265px;
+}
+
 
 a {
     margin-left: 25px;
