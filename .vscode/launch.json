@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///C:/Users/chris/OneDrive/Desktop/Taylor%20Portfolio/Portfolio/Taylor%20Portfolio/TaylorPortfolio.html",
+            "url": "file:///C:/Users/chris/OneDrive/Desktop/Taylor%20Portfolio/Portfolio/index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
