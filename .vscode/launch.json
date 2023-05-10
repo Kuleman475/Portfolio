@@ -8,7 +8,10 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "file:///C:/Users/chris/OneDrive/Desktop/Taylor%20Portfolio/Portfolio/index.html",
+            // Desktop URL:
+            //"url": "file:///C:/Users/chris/OneDrive/Desktop/Taylor%20Portfolio/Portfolio/index.html",
+            // Laptop URL:
+            "url":"file:///C:/Users/Taylor/Desktop/Taylor%20Portfolio/kuleman475.github.io/projects.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
