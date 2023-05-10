@@ -20,7 +20,7 @@ nav {
 }
 
 * {box-sizing: border-box}
-.mySlides1, .mySlides2 {display: none;}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4 {display: none;}
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -38,7 +38,8 @@ img {vertical-align: middle;}
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: blue;
+  background-color: lightblue;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
