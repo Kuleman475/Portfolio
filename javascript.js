@@ -1,3 +1,9 @@
+function toggleMenu() {
+document.getElementsByClassName("navigation")[0].classList.toggle("responsive");
+}
+
+
+
 let slideIndex = [0, 1];
 let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4"];
 showSlides(1, 0);
