@@ -1,3 +1,0 @@
-function scream() {
-    alert("AAAAAAAAAAAA")
-}
