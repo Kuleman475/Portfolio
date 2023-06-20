@@ -11,6 +11,217 @@
     
     <main>
         <h3>Week 4</h3>
+
+
+<p>Debugging in the browser:</p>
+
+<p>    debugging is the process of finding and fixing errors. </p>
+    
+   <p> Source Panel:</p>
+    
+   <p> 3 parts
+    1. file navigator. see what files you have under the website
+    2. code editoy shows the source code.
+    3. javascript debugging pane
+    </p>
+    <p>
+    Console:
+    
+    helps to see what the code is actually doing.
+   </p>
+   <p> 
+    Breakpoints:
+    
+    click on the number and it sets a breakpoint. able to pause code to try and fix what is going on. and skip around the code to see where it is going.
+    </p>
+    <p>
+    Command Debugger
+    
+    you can type "debugger;" in the code to have the code automatically stop it when the the dev tools is open.
+    </p>
+    <p>
+    Pause and Look around:
+    
+    after set breakpoints reload page
+    WATCH: shows current values for any expression
+    CALL STACK: shows the nested calls chain. if clicked on a stack item debugger jumps to corresponding code and examines that. 
+    SCOPE: shows current variables.
+    RESUME: continues on with the code. til next breakpoint or til it finishes the code
+    STEP: runs the next command if continued clicked it will run through the code one step at a time.
+    STEP OVER: continues to next command, but does not go into a function. the execution is paused after the function call.
+    STEP INTO: step into listens to async functions compared to step that does not.
+    STEP OUT: continues the execution till the end of the current function.
+    ENABLE/DISABLE BREAKPOINTS: turns on or off all breakpoints.
+    ENABLE/DISABLE AUTOMATIC PAUSE INCASE OF ERROR: when enabled if dev tools is open and an error occurs during the script execution automatically pauses it. helps with debugging to see where it is breaking at.
+    </p>
+    <p>
+    Logging:
+    
+    console.log to see what users can't see but develpors can to help see what is going on with code.
+    </p>
+    <p>    
+    Coding Style:
+    
+    "Our code must be as clean and easy to read as possible.
+    
+    That is actually the art of programming – to take a complex task and code it in a way that is both correct and human-readable. A good code style greatly assists in that."
+    
+    CURLY BRACES: most of the time are written on the same line as the corresponding key word. 
+    write it like this:
+        if (n < 0) {
+        alert("blah blah blah");
+        }
+    </p>
+    <p>
+        LINE LENGTH: best practice is to split lines up so not super long line.
+    max line lenght should be agreed upon at a team level. most cases is 80-120 characters.
+    </p>
+    <p>
+    INDENTS:horizontal indents is usually 2 or 4 spaces (1-2 tab keys)
+    verticle lines is empty lines for splitting codes in to logical blocks.
+        example:
+            function pow(x, n) {
+              let result = 1;
+    empty space here->
+              for (let i = 0; i < n; i++) {
+                result *= x;
+              }
+    empty space here->
+              return result;
+            }
+        </p>
+        <p>
+            SEMICOLONS: some languages require semicolon at end of line and others where it is optional. 
+    </p>
+    <p>
+    NESTING: try and avoid nesting code too deep.
+    </p>
+    <p>
+    FUNCTION PLACEMENT: 
+    1. declare functions above the code  
+    2. declare functions below the code 
+    3. declare functions within the code
+    generally speaking functions below the code.
+    </p>
+    <p>
+    STYLE GUIDES: many different style guides able to use and work with or you can create your own.
+    </p>
+    <p>
+    AUTOMATED LINTERS: linters are tools that can automatically check the style of your code and make improving suggestions.
+    "The great thing about them is that style-checking can also find some bugs, like typos in variable or function names. 
+    Because of this feature, using a linter is recommended even if you don’t want to stick to one particular “code style”."
+    </p>
+    <p>
+    ERROR HANDLING, "TRY...CATCH":
+    
+    Sometimes we make mistakes when writing code and other times the user puts in an incorrect value and an error occurs. 
+    when an error happens the script usually dies or stops working right then.
+    </p>
+    <p>
+    TRY...CATCH SYNTAX:
+    1. try {...} is executed
+    2. if no errors then catch (err) is ignored: and continues on skipping catch.
+    3. if errors occur then try is stopped and goes to to catch (err) will contain an error object with details about what happened.\
+    </p>
+    <p>
+    "An errorless example: shows alert (1) and (2):
+    
+    try {
+    
+      alert('Start of try runs');  // (1) <--
+    
+      // ...no errors here
+    
+      alert('End of try runs');   // (2) <--
+    
+    } catch (err) {
+    
+      alert('Catch is ignored, because there are no errors'); // (3)
+    
+    }"
+</p>
+<p>
+    
+    "An example with an error: shows (1) and (3):
+    
+    try {
+    
+      alert('Start of try runs');  // (1) <--
+    
+      lalala; // error, variable is not defined!
+    
+      alert('End of try (never reached)');  // (2)
+    
+    } catch (err) {
+    
+      alert(`Error has occurred!`); // (3) <--
+    
+    }"
+    
+    try catch only works for run time errors, and sychronously
+</p>
+<p> 
+    ERROR OBJECT:
+    (err) or any variable you want it to be called.
+    built in errors:
+        name: Error name example undefined variable is "ReferenceError"
+        message: textual message about error details.
+        stack: current call stack: a string with information about the sequence of nested calls that led to the error. debugging
+   </p>
+   <p> 
+    OPTIONAL "CATCH" BINDING:
+     
+    if we don't need error details, "catch" may omit it.
+    </p>
+    <p>
+    USING TRY...CATCH:
+    
+    if json is malformed, JSON.parse generates an error and the script dies.
+    
+    if something is wrong with the data the visitor doesn't know why the code just dies without an error message.  
+    
+    example:
+    "let json = "{ bad json }";
+    
+    try {
+    
+      let user = JSON.parse(json); // <-- when an error occurs...
+      alert( user.name ); // doesn't work
+    
+    } catch (err) {
+      // ...the execution jumps here
+      alert( "Our apologies, the data has errors, we'll try to request it one more time." );
+      alert( err.name );
+      alert( err.message );
+    }"
+    
+    shows an error message now the user knows something is wrong vs it just stopping.
+    
+    THROWING OUR OWN ERRORS:
+    
+    syntax for "throw" is: 
+        throw <error object>
+    javascript has some built in methods for throwing errors.
+     let error = new Error(message), or SyntaxError(message), or ReferenceError(message);
+    </p>
+    <p>
+    RETHROW:
+    
+    if something is wrong in the try{ } then it makes it harder to debug and still gets the error message from catch.
+    </p>
+    <p>
+    TRY...CATCH...FINALLY:
+    runs the try and the catch then it always runs the finally
+    if errors then it runs catch if no errors it skips over catch and just runs to finally
+    </p>
+    <p>
+    GLOBALLY CATCH:
+    
+    window.onerror can catch things that is hard to catch since it is at the beginning of when the code is run.
+    
+    </p>
+
+
     </main>
     <footer> 
     </footer> 

@@ -10,7 +10,233 @@
     <header><h1>WDD 330</h1></header>
     
     <main>
-        <h3>Week 5</h3>
+        <h3>Week 5 Notes</h3>
+
+        <p>
+            FETCH:
+            Javascript can send network requests and recieve new info.
+            
+            it can load user info, submit an order, get updates, etc.
+         </p>
+         <p>   
+            AJAX(asycnhronos Javascript and XML):
+            fetch() is a good way to send and recieve information from the server
+            </p>
+            <p>
+            Example: let promise = fetch(URL, [parameter, methods etc.]);
+            
+            getting a response has 2 steps to it 
+            1. the promise, returned by fetch, resolves with an object with response class as soon as the server responds
+            
+            checks to see if fetch worked. 
+            example
+            let response = await.fetch(url);
+            
+            if (response.ok) {
+                let json = await response.json();
+            }
+            else {
+            alert("HTTP-Error: " + response.status);
+            }
+            
+            2 use a method to get the response body
+            
+            response.text() read the response and returns as text
+            response.json() returns the response as JSON
+            response.formData() returns as FormData
+            response.blob() returns as blob (binary data with type)
+            response.arrayBuffer() returns low level representation of binary data
+            
+            
+            let commits = await response.json();
+            
+            alert(commits[0].author.login);
+            
+            or without await
+            
+            fetch("https....)
+            .then(response => response.json())
+            .then(commits => alert(commits[0].author.login))
+            </p>
+            <p>
+            RESPONSE HEADERS:
+            the response headers are like Map headers in (response.headers)
+            </p>
+            <p>
+            REQUEST HEADERS:
+            headers is an object with ongoing headers.
+            example
+            let response = fetch(protectedURL, {
+                headers: {
+                    authentication: "secret"
+                }
+            });
+            </p>
+            <p>
+            POST REQUEST:
+            post can be used to submit data.
+            to make a POST request we need to use fetch options:
+                method: HTTP-method POST
+                body: requests the body of string, formdata, blob
+            
+            
+            let respose = await fetch("/article...", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json;charset=utf-8"
+                },
+                body: JSON.stringify(user)
+            });
+            </p>
+            <p>
+            SENDING AN IMAGE:
+            using binary with fetch to save an image.
+            </p>
+            <p>
+                SUMMARY:
+            fetch usually has 2 await calls.
+            let response = await fetch(url, options); // resolves with response headers
+            let result = await response.json(); // read body as json
+            
+            or 
+            
+            2 .then calls
+            
+            Exampe
+            fetch(url, options)
+              .then(response => response.json())
+              .then(result => /* process result */)
+            
+            </p>
+            <p>
+                
+            FETCH: CROSS ORIGIN REQUESTS:
+            
+            If we send a fetch request to another website it will most likely fail.
+            
+            CORS (Cross Origin Resource Sharing)
+            you can share information as long as both sides agree
+            </p>
+            <p>
+            SAFE REQUEST:
+            1 Safe method: GET, POST, HEAD
+            2 Safe headers: accept, accept-Language, Content-Language, content-Type
+            
+            Safe requests can be made with form or script without any special methods.
+            
+            Javascript -> fetch() -> Browser -> HTTP-Request -> Server -> HTTP-response -> Browser -> allows or fails -> Javascript
+            </p>
+            <p>
+               UNSAFE REQUESTS:
+            "preflight" request asks for permission 
+            OPTIONS no body and 3 headers
+            ACCESS-CONTROL-REQUEST-METHOD: header has the method of unsafe request
+            ACCESS-CONTROL-REQUEST-HEADERS: provides a comma-seperated list of unsafe HTTP-headers
+            ORIGIN: header tells where request came from.
+            
+            if server agrees to request it will send status 200 and headers
+            ACCESS-CONTROL-ALLOW-ORGIN: must be a "*" or the requesting origin.
+            ACCESS-CONTOL-ALLOW-METHODS: must have the allowed method.
+            ACCESS-CONTROL-ALLOW-HEADERS: must have a list of allowed headers
+            
+            </p>
+            <p>
+            REST PARAMETERS AND SPREAD SYNTAX:
+            
+            REST PARAMETERS "..." :
+            
+            a function can be called with any number of arguments no matter how it is defined.
+            
+            "..." folowed by the name of the array that will contain them means to get remaining parameters in an array.
+            
+            function calculateTotal(...Numbers) {
+            // calculate total
+            }
+            
+            you can choose to get the first parameters and gather the rest
+            
+            example 
+            function showName(firstName, lastName, ...titles) {
+            // gets first name and last name everything else goes into titles array
+            }
+            </p>
+            <p>
+            SPREAD SYNTAX:
+            
+            Opposite of getting an array from list.
+            Array.from because it converts it into an array
+            
+            let arrCopy = [...arr];
+            
+            or 
+            
+            let objCopy = {...obj};
+            
+            </p>
+            <p>
+            HOW SINGLE PAGE APPLICATIONS WORK:
+            
+            Single page applications use state from url location or track internally
+            location base SPA can share link that will work when you click on said link
+            
+            window.location can interact with different parts of url without parse it yourself
+            
+            only 3 of the location objects are imprtant pathname, hash, and search
+            
+            /images?of=mountains
+            </p>
+            <p>
+            HOW BROWSERS HANDLE LOCATIONS:
+            
+            the browsing context maintains a session history.
+            document describes the page
+            while you are clicking links and navigating through pages the brower is building up a session history.
+            
+            clicking the back button on the browser will make a current entry (current.index - 1);
+            
+            pushState(null, "", "/next-location") and replaceState(null, "", "/replace-location")
+                  State, title, path				State, title, path
+            path can be locally or a URL if you want too.
+            
+            history.pushState() adds an entry to the session history after the current entry
+            history.replaceState() replaces the current entry in the session.
+            
+            go() is like the browser forward and back buttons
+            
+            go(-1);  go back one entry
+            go(1);  go forward one entry
+            go(-10);  go way back
+            go(0);  reload
+            go(); reload
+            </p>
+            <p>
+            
+            PROBLEM WITH SINGLE PAGE APPS:
+            
+            routing is a way to show the layout of the page
+            
+            SPA serve all the code from a single index.html file
+            
+            using JavaScript to handle URL rounting STEPS
+            1. configure everything to point back to index.html
+            2. Supress the default behavior when someone clicks a link that points to another page in the app
+            3. Use more Javascript history.pushState() to update URL without making the page reload
+            4. match url agains a map of routes and serve right content based on it
+            5. if URL has variable info in it parse that data out of RL.
+            6. when someone clicks the browsers forward or backward button update url and ui
+            7. update title on element page
+            8. use more javascript to dynamically focus the content area when the content changes.
+            
+            that is a lot of javascript and is fragile but you could use a multipage for similar or better results
+            </p>
+            <p>
+            WHY IS THIS BETTER THAN USING JAVASCRIPT ROUTING?
+            
+            1. supports browsers forward and back buttons 
+            2. don't need to intercept clicks it just does it itself.
+            3. you don't need to use complex regex patterns or another library to parse URL
+            4. it is simpler and easier to implement
+            </p>
     </main>
     <footer> 
     </footer> 
