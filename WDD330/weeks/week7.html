@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 - Week 7</title>
+    <meta name="description" content="WDD 330 - Week 7">
+    <link rel="stylesheet" href="../css.css">
+</head>
+<body>
+    <header><h1>WDD 330</h1></header>
+    
+    <main>
+        <h2>Week 7</h2>
+
+        <p>Team Activity: </p>
+        <p>We created the checkout process. we struggled with this one. doing the first 3 steps was okay getting the user to put in their information. 
+            then take the users information and create an order form to make an order to be able to process it to be shipped to them.
+        </p>
+        <p>Trello Card: </p>
+
+        <p>The trello card I did was breadcrumbs and what breacrumbs is essentially leaving "breadcrumbs" while going through the website.
+            so go from the home page to the tents page to the product it would look something to the effect of 
+        </p>
+        <p>Home >> Tents >> product</p>
+
+        <img src="../imagesWDD330/breadcrums.png" alt="bread">
+
+
+        <h3>Week 7 Notes</h3>
+            <p>
+            THIS OBJECT METHODS:
+            objects are usually created to represent entites in the real world like orders.
+           
+
+            a function that is a property of an object is a method
+             </p>
+             <p>
+            method short hand 
+            user = {
+                sayHI() {
+                    alert("hello");
+                    }
+                };
+            
+            omit "function"
+            </p>
+            <p>
+            this is the current object
+             this.name gets current object
+            </p>
+            <p>
+            "this" works better to get the object.
+            
+            "this" can be used in any function if its not a method of an object
+            
+            ARROW FUNCTIONS HAVE NO "this"
+            
+            since it is taken from not a "normal" function and it won't work.
+            </p>            
+            <p>
+            CSS ANIMATIONS
+            </p>
+            <p>
+            css transitions 
+            </p>
+            <p>
+            .animations {
+                transition-property: background-color;
+                transition-duration: 3s;
+            }
+            </p>
+            <p>
+            doing that changes the background color for 3 seconds.
+            </p>
+            <p>
+            4 properties in css transition: 
+            
+            "transition-"
+            property,
+            duration,
+            timing-function,
+            delay.
+            <p>
+            property can be written as a list of properties -left, margin-left, height, color. or all meaning all properties
+            
+            duration time in seconds or miliseconds.
+            
+            delay 1s or 2s makes it wait in 1 or 2 seconds.
+            
+            timing-function describes the process during the time line go slow then go fast or go fast then slow.
+            </p>
+            <p>
+                bezier curve- 2 control points first (0,0) last (1,1) intbetween points can be anything.
+                cubic-bezier(x2, y2, x3, y3).
+            
+                x axis is the time to the end of the transition duration.
+                y axis specifies the completion of the process, start to final value.
+                
+                cubic-bezier(0, 0, 1, 1) on a graph is a straigh line point A to point B.
+                cubic-bezier(0.0, 0.5, 0.5, 1.0) starts fast then goes slower.
+                
+                there is also other objects you could put in for the timing function we could use ease, ease-in, ease-out, ease-in-out. each doing there own prespective name.
+            
+                if we go out of the range y0 or y1 then the object will go further out of the quadrant it is assinged.
+                </p>
+                <p>
+            STEPS: 
+            
+            steps(number of steps, start/end)
+            when you do start it starts immediatly and when you do end it starts at the end of the first step
+            </p>
+            <p>
+            TRANSITIONEND EVENT: 
+            
+            when css animation completes transitionend event triggers.
+            generally it is used to do an action after the animation is complete or do another animation.
+            
+            event.propertyName can be good to animate multiple properties at the same time.
+            
+            event.elapsedTime the time in seconds it took without transition-delay property.
+            </p>
+            <p>
+            KEYFRAMES: 
+            
+            using @keyframes you can join multiple animations together.
+            
+            you can create a key frame and use the same name on multiple occasions so you don't need to write the same lines of code over and over again.
+            </p>
+            <p>
+            PERFORMANCE:
+             
+            when there is a style change the browser has 3 steps to process
+            1 layout: change the position of the element
+            2 paint: change how everything should look in thier respective places
+            3 composite render everything and add css transforms
+            </p>
+            <p>
+            the more you have with the animations the slower it can become
+            so skipping the paint step will help it run more smooth
+            </p>
+            <p>
+            transform goes on top of the existing layout and paint calculations
+            </p>
+            <p>
+            using transform is a powerful property and don't trigger the first two steps. you can flip, rotate, stretch, shrink, move, etc.
+            </p>
+            <p>
+            transform: scale to change the size of the element
+            </p>
+            <p>
+            opacity property also doesn't trigger layout and it can be used to show/hide or fade in/out effects.
+            </p>
+            <p>
+            using both transform and opacity can be a good use for getting good looking and smooth animations     
+            </p>
+    </main>
+    <footer> 
+    </footer> 
+    <script src="../js.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 - Week 6</title>
+    <meta name="description" content="WDD 330 - Week 6">
+    <link rel="stylesheet" href="../css.css">
+</head>
+<body>
+    <header><h1>WDD 330</h1></header>
+    
+    <main>
+        <h2>Week 6</h2>
+
+        <p>Team Activity: </p>
+        <p>We were able to add the 3 other categories to the mix of the tents so the user has a lot more options to choose from.
+            when you click on a link to the tents page or hammocks page it will take you to that page and show all of the products on that page.
+        </p>
+
+        <p>Trello Card:</p>
+        <p>The user will be able to change the quantity in the cart so they could buy 3 tents instead of one or having the same tent for 1 quantity 3 times.</p>
+
+        <img src="../imagesWDD330/Change Quantity.png" alt="quantity">
+
+<h3>Week 6 Notes</h3>
+
+<p>
+    Form Properties and Methods
+   </p>
+   <p> 
+    Document forms are recieved from document.forms
+    </p>
+    <p>
+    any elements with the "name" collection example name="age" you can recieve it by form.elements
+    </p>
+    <ul>
+<li>    let form = document.forms.formName</li>
+<li>    let result = form.elements.age</li>
+    </ul>
+    
+    <p>
+    if multiple components have the same name then you can do
+    </p>
+    <ul>
+<li>    let form = document.forms[1];</li>
+<li>    let age = form.elements.age;</li>
+    </ul>
+    <p>
+    it will show the array numbers age
+    </p>
+    <p>
+    Fieldset:
+    fieldset name="userFields, 
+    let formset = form.elements.userFields>, 
+    
+    element.form references all elements and vice versa
+    </p>
+    <p>
+    INPUT AND TEXTAREA:
+    access input.value for string and input.checked for boolean
+    </p>
+    <p>
+    SELECT AND OPTION:
+    
+    select has 3 important properties
+    1 select.options collection of option subelements
+    2 select.value value of current selected
+    3 selet.selectedIndex the number of the currently selected 
+    </p>
+    <p>
+    you can type selected to select multiple options at once
+    </p>
+    <ul>
+  <li>  parameters inside option</li>
+  <li>text</li>
+    <li>value</li>
+    <li>defaultSelected</li>
+    <li>selected</li>
+    </ul>
+    <p>
+    defaultSelected sets HTML attribute while selected sets whether option is selected or not.
+    <ul>
+<li>    option.selected</li>
+<li>    option.index</li>
+<li>    option.text</li>
+    </ul>
+    </p>
+    <p>
+    FORMS: EVENT AND METHOD SUBMIT
+    
+    2 Ways to submit a form
+    
+    1. click <input type="submit">
+    2. push Enter on an input field.
+    
+    both actions submit the form
+    </p>
+    <p>
+    METHOD: SUBMIT:
+    form.submit()
+    
+    using the form.subimt manually creates and submits a form
+    </p>
+    <p>    
+    CLIENT-SIDE FORM VALIDATION:
+    
+    is the initial validation to check so the user can fix right away.
+    if not used it gets to the server and then takes some time to come back with the errors.
+    
+    you should ALWAYS do security checks on server and client side just to be safe.
+    </p>
+    <p>
+    WHAT IS FORM VALIDATION:
+     
+    form validation is making sure you provide the data that is needed
+    example you don't feel out a field and it is required and shows a message or something saying something is wrong with the field whether that be not filled out correctly or at all.
+    like when filling out a password and you have to use a number and capital letters it needs to meet all the requirements.
+    
+    form validation is the thing that checks all the form data to make sure it is correct.
+    
+    built in form validation uses HTML form validation features. has better performance than javascript but not as customizable.
+    javaScript validation is coded using Javascript but you'll need to write it out yourself or use a library. 
+    </p>
+    <p>
+    BUILT IN FORM VALIDATION:
+    
+    can validate most user data without javaScript.
+    it validates the attributes on the form elements
+    
+    when the element is valid it matches with CSS class
+    also it will send to the browser unless something else is stopping it.
+    </p>
+    <p>
+    REQUIRED ATTRIBUTE: 
+    when you have the required attribute set it needs to be filled out in order for it to be sent
+    </p>
+    <p>
+    validating against a regular expression:
+    regexp is a pattern that can ve used to match character combinations in text strings.
+    
+    example pattern = [Bb]anana;
+    
+    minlength and maxlength;
+    
+    min length means it has to have at least a certain amount of characters while max length has to be under the max length of characters; 
+    
+    number would have a max="x" and min="y" since it is a number you would put a number for x and y.
+    </p>
+    <p>
+    VALIDATING USING JAVASCRIPT:
+    
+    HTMLButtonElement
+    HTMLInputElement
+    etc.
+    
+    validationMessage: returns a localized message describing what isn't correct in the validation
+    validity: returns a validityState which describes the state which it is in
+    
+    automated error message has 2 drawbacks 
+    1 no way to change the look and feel with CSS
+    2 depend on browser locale which means you can have the page be in one language and the error message in another.
+    
+    </p>
+    <p>
+    USING FORM DATA OBJECTS EFFECTIVELY:
+    
+    form needs an ID in order to get form objects.
+    needs to have "name" attribute
+    prevenDefault(); stops page from loading. 
+    create a new for using new FormData(FormName)
+    
+    use append method to add into form
+    network tab will show the form data
+    
+    let myform = ev.target;
+    let fd = new FormData(myForm) those lines got it to submit and send 
+    
+    convert form to data to a string using JSON.stringify(fd)
+    
+     
+    </p>
+        
+    </main>
+    <footer> 
+    </footer> 
+    <script src="../js.js"></script>
+</body>
+</html>

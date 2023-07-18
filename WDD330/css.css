@@ -1,0 +1,27 @@
+body {
+    background-color: skyblue;
+}
+header {
+    text-align: center;
+    font-size: 30px;
+}
+img {
+    max-width: 90%;
+    padding: 25px;
+}
+main {
+    margin: 5%;
+    padding: 2%;
+    background-color: darkgrey;
+}
+a {
+    font-size: 20px;
+    text-align: right;
+}
+h4 {
+    text-align: center;
+}
+.weeks {
+    font-size: 20px;
+    text-align: center;
+}

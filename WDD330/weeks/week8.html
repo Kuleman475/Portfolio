@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 330 - Week 8</title>
+    <meta name="description" content="WDD 330 - Week 8">
+    <link rel="stylesheet" href="../css.css">
+</head>
+<body>
+    <header><h1>WDD 330</h1></header>
+    
+    <main>
+        <h2>Week 8</h2>
+
+        <p>Team Activity:</p>
+        <p>This week for the team activity we were able to change what is shown when the user inputs something incorrectly. it used
+            to say when something went wrong just "bad response" but that doesn't give much detail. so we went back in and changed 
+            it to be something to the effect of "invalid experation date" or whatever the user put that was invalid.
+        </p>
+
+        <p>Trello Card: </p>
+        <p>Discount Flag on product detail. I took the amount off and took the price you save and made it show how much you are saving.</p>
+
+        <img src="../imagesWDD330/dollarsSaved.png" alt="saved">
+        <h3>
+            Week 8 notes
+        </h3>
+<p>
+JSON WEB TOKENS:
+</p>
+<p>
+
+json weg tokens (jwt) is a way to transmit information using json objects.
+it is small and can be sent quickly.
+it is also self contained, so it doens't need to contact the database more than once.
+single sign on feature is used by most to since it is small it can be used more efficiently 
+information exchange- using a public and private key pair can be sure the user is who they say they are
+header.payload.signature
+</p>
+<p>
+the header has 2 parts of it the alg and typ
+{	
+	'alg': 'HS256',
+	'typ': 'JWT',
+}
+</p>
+<p>
+Payload: 
+
+has claims, claims are statements about an entity usually the user 3 claims reserved, public, and private. 
+
+reserved- set of predefined clames some are issuer, experation time, subject, etc.
+
+public- they can be defined at will by those using JWT's and should be defined IANA JWT registry
+private- custom claims that created to share betwen parties
+</p>
+<p>
+Signature
+</p>
+<p>
+how to create a signature
+
+HMACSHA256(
+  base64UrlEncode(header) + '.' +
+  base64UrlEncode(payload),
+  secret)
+</p>
+<p>
+how jwt works: 
+
+in authentication when the user successfully logs in the jwt returns 
+
+authorization: bearer token
+</p>
+<p>
+Post users login -> creates JWT with a secret -> returns JWT to browser ->
+sends JWT on header -> checks JWT signature -> sends response to client
+</p>
+<p>
+Why you should use JWT's: 
+
+JWT compared to simplw web tokens and securtity assertion markup language tokens 
+jwt is easy to use in an internet scale 
+</p>
+<p>
+Auth0: 
+
+when Auth0 is used it issues a JWT and sends it to the user.
+jwts are used to authenticate and authorize in Auth0
+</p>
+
+
+<p>
+DEVELOP, DEBUG, LEARN:
+
+javascript allows activity in the browser. learn-> develop -> debug
+</p>
+<p>
+back then the only way to debug was to use an alert and if you got stuck in a loop you would have to shut down the browser or computer.
+abstractions to use on different browsers
+ </p>
+ <p>
+Focus on the end users
+</p>
+<p>
+our job is to build things for people who will use them
+</p>
+<p>
+not about us about tech legacy
+</p>
+<p>
+developers are people too.
+technology moves fast and when you learn one thing it is something in the past
+</p>
+<p>
+amazing tech aand nobody is happy
+</p>
+<p>
+stopped playing with the programs
+</p>
+<p>
+context switching is exhausting changing from VS code to website to stackoverflow
+</p>
+<p>
+rethinking tooling prevent us from doing things wrong instead of patching up what we created.
+</p>
+<p>
+learning as developing and debugging
+</p>
+<p>
+most of the work is done on local servers
+</p>
+<p>
+listen to the squiggly lines in the vscode to help not have errors and learn from your mistakes
+</p>
+<p>
+you can get a preview of the editor itself and see how it works.
+</p>
+<p>
+open source code is a resource.
+</p>
+<p>
+editor browser and docs good way to learn.
+</p>
+    </main>
+    <footer> 
+    </footer> 
+    <script src="../js.js"></script>
+</body>
+</html>
