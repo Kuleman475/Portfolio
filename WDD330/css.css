@@ -16,5 +16,12 @@ main {
 }
 a {
     font-size: 20px;
+    text-align: right;
+}
+h4 {
+    text-align: center;
+}
+.weeks {
+    font-size: 20px;
     text-align: center;
 }
