@@ -29,7 +29,7 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 10px;
+  max-width: 1000px;
   position: relative;
   margin: auto;
 }
@@ -89,16 +89,16 @@ footer {
     text-align: center;
 }
 
-/* Large Screen */
+/* Large Screen
 @media only screen and (min-width: 70em){
 
 
 }
 
-/* Medium Screen */
+/* Medium Screen 
 @media only screen and (min-width: 50em){
 header {
   background-color: red;
 }
-}
+} */
 
