@@ -1,9 +1,24 @@
-header{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-   
+header {
+  background-color: goldenrod;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
+
+.navigation li:first-child {
+    display: none;
+}
+.navigation {
+    display: inline;
+}
+.responsive li {
+    padding: 0;
+    display: inline;
+}
+.navigation li{
+    display: inline;
+}
+
 body{
     background-color: cyan;
 }
@@ -15,12 +30,8 @@ nav {
     text-align: center;
     background-color: navajowhite;
     font-size: 32px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-nav li {
-  padding-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 * {box-sizing: border-box}
@@ -89,16 +100,32 @@ footer {
     text-align: center;
 }
 
-/* Large Screen
-@media only screen and (min-width: 70em){
 
 
+
+
+
+
+
+
+
+
+
+
+/* Small Screen */
+@media only screen and (max-width: 875px){
+  .navigation li {
+    display: none;
+    text-align: center;
+  }
+  .navigation li:first-child{
+    display: block;
+    flex: 1 1 100%;
+    padding: 0px;
+  }
+  .responsive li {
+    display: block;
+    padding-top: 50px;
+  }
 }
-
-/* Medium Screen 
-@media only screen and (min-width: 50em){
-header {
-  background-color: red;
-}
-} */
 
