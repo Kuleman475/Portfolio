@@ -107,8 +107,26 @@ main {
   font-size: xx-large;
   text-align: center;
   padding: 10px;
+  padding-bottom: 0px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.language {
+  text-align: center;
+  font-size: larger;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.description {
+  text-align: center;
+  font-size: larger;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.projectButton {
+  background-color: red;
+  color: white;
+  font-size: large;
+  padding: 5px;
+  margin-bottom: 20px;
+}
 /* Projects Page End */
 
 footer {
