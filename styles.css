@@ -157,7 +157,13 @@ footer {
   }
 } */
 nav {
-  font-size: 22px;
+  font-size: 24px;
+}
+header {
+ font-size: 12px;
+}
+footer {
+  font-size: 25px;
 }
 }
 
@@ -178,8 +184,39 @@ nav {
     display: block;
     padding-top: 50px;
   }
-nav {
-  font-size: 32px;
-}
+  nav {
+    font-size: 24px;
+  }
+  h1 {
+   font-size: 24px;
+  }
+  footer {
+    font-size: 20px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  main {
+    font-size: smaller;
+  }
+
+  /* Projects Page Begin */
+  .projectNames{
+    font-size: medium;
+
+  }
+  .language {
+    font-size: smaller;
+
+  }
+  .description {
+    font-size: smaller;
+
+  }
+  .projectButton {
+    font-size: smaller;
+
+  }
+  /* Project Page Ends */
 }
 
