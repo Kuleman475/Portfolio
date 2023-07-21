@@ -45,7 +45,7 @@ nav {
 /* Slideshow Begin */
 
 * {box-sizing: border-box}
-.mySlides1, .mySlides2, .mySlides3, .mySlides4 {display: none;}
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5 {display: none;}
 img {vertical-align: middle;}
 .slideshow-container {
   max-width: 1000px;
@@ -128,6 +128,20 @@ main {
   margin-bottom: 20px;
 }
 /* Projects Page End */
+
+/* Certifications and Degree Page Begin */
+
+.degreeNames {
+  text-align: center;
+}
+
+.Cert-Degree {
+  position: absolute;
+  left: 45%;
+}
+
+/* Certifications and Degree Page End */
+
 
 footer {
     border-radius: 100px;
