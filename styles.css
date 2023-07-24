@@ -140,6 +140,9 @@ main {
   position: absolute;
   left: 45%;
 }
+main p {
+  text-align: center;
+}
 
 /* Certifications and Degree Page End */
 
@@ -147,6 +150,14 @@ main {
 
 .logo {
   max-width: 150px;
+}
+.contactName {
+  font-size: 32px;
+  text-align: center;
+}
+.contactLink {
+  font-size: 28px;
+  text-align: center;
 }
 
 /* Contact Me Page End */
@@ -240,5 +251,18 @@ footer {
 
   }
   /* Project Page Ends */
+
+  /* Contact Page Begins */
+
+  .contactName {
+    font-size: 25px;
+    text-align: center;
+  }
+  .contactLink {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  /* Contact Page Ends */
 }
 
