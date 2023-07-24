@@ -7,6 +7,33 @@ header {
   margin: 30px;
 }
 
+/* Main Page Begin */
+
+.flex-container {
+  display: flex;
+}
+
+.Intro {
+  font-size: 36px;
+  text-align: center;
+}
+
+.flex-container > div {
+  margin: 10px;
+  font-size: larger;
+  border-radius: 50px;
+}
+
+
+.profile-pic {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+/* Main Page End */
+
 /* Navigation Begin */
 
 .navigation li:first-child {
@@ -198,8 +225,22 @@ header {
 footer {
   font-size: 25px;
 }
+
+.flex-container {
+  display: block;
 }
 
+.Intro {
+  font-size: 36px;
+  text-align: center;
+}
+
+.profile-pic {
+  max-width: 300px;
+}
+
+}
+/* Medium Screen End */
 
 @media only screen and (max-width: 830px){
   .navigation li {
