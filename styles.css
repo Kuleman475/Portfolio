@@ -88,6 +88,7 @@ a {
   padding-bottom: 25px;
   padding-left: 20px;
   padding-right: 20px;
+  text-decoration: none;
 }
 
 main {
@@ -142,6 +143,13 @@ main {
 
 /* Certifications and Degree Page End */
 
+/* Contact Me Page Begin */
+
+.logo {
+  max-width: 150px;
+}
+
+/* Contact Me Page End */
 
 footer {
     border-radius: 100px;
