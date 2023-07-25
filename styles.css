@@ -64,7 +64,7 @@ nav {
     font-size: 32px;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin: 30px;
+    margin: 20px;
 }
 
 /* Navigation End */
@@ -149,8 +149,6 @@ main {
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .projectButton {
-  background-color: red;
-  color: white;
   font-size: large;
   padding: 5px;
   margin-bottom: 20px;
@@ -160,6 +158,7 @@ main {
 /* Certifications and Degree Page Begin */
 
 .degreeNames {
+  font-size: 30px;
   text-align: center;
 }
 
@@ -201,21 +200,9 @@ footer {
 
 
 /* medium Screen */
+
 @media only screen and (max-width: 1020px){
-  /* .navigation li {
-    display: none;
-    text-align: center;
-  }
-  .navigation li:first-child{
-    /* display: block;
-    flex: 1 1 100%;
-    padding: 0px;
-  }
-  .responsive li {
-    display: block;
-    padding-top: 50px;
-  }
-} */
+
 nav {
   font-size: 24px;
 }
@@ -235,22 +222,28 @@ footer {
   text-align: center;
 }
 
+.flex-container {
+  text-align: center;
+}
+.flex-container ul {
+  display: inline-block;
+  text-align: center;
+}
+
 .profile-pic {
+  margin: auto;
   max-width: 300px;
 }
-
 }
+
 /* Medium Screen End */
 
-@media only screen and (max-width: 830px){
+@media only screen and (max-width: 841px){
   .navigation li {
     display: none;
     text-align: center;
   }
   .navigation li:first-child{
-    /* display: block;
-    flex: 1 1 100%;
-    padding: 0px; */
     display: block;
     text-align: center;
   }
@@ -259,10 +252,10 @@ footer {
     padding-top: 50px;
   }
   nav {
-    font-size: 24px;
+    font-size: 26px;
   }
   h1 {
-   font-size: 24px;
+   font-size: 26px;
   }
   footer {
     font-size: 20px;
@@ -305,5 +298,17 @@ footer {
   }
 
   /* Contact Page Ends */
+
+  .Intro {
+  font-size: 22px;
+}
+  .profile-pic {
+    margin: auto;
+    max-width: 150px;
+  }
+  .degreeNames {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
