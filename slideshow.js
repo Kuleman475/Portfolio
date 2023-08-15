@@ -27,6 +27,7 @@ let slideshowIndex = 0;
 showTimedSlides();
 
 function showTimedSlides() {
+  console.log("RED");
   let i;
   let slides1 = document.getElementsByClassName("mySlides1");
   let dots = document.getElementsByClassName("dot");
